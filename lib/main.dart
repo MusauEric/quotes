@@ -43,7 +43,7 @@ class _quateListState extends State<quateList> {
           quote: quote,
           delete: (){
             setState(() {
-              print("nimefika");
+              // print("nimefika");
               quotes.remove(quote);
             });
           },

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'quote.dart';
 
 class QuoteCard extends StatelessWidget {
-  final Quote quote;
-  final Function delete;
+  Quote quote;
+  Function delete;
 
   QuoteCard({required this.quote, required this.delete});
 
@@ -32,8 +32,10 @@ class QuoteCard extends StatelessWidget {
               height: 8.0,
             ),
             RaisedButton.icon(
-                onPressed: (){
-                  delete;
+                onPressed: () {
+                  if (delete != null) {
+                    delete();
+                  }
                 },
                 icon: Icon(Icons.delete),
                 label: Text("Delete Quote"))
